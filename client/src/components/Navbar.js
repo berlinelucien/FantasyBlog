@@ -30,8 +30,8 @@ const Navbar = () => {
             Explore
                   </a>
                    {/** Fanatasy Books pages route link here */}
-          <a href="/Explore" class="navbar-item">
-            Fantasy Books ??
+          <a href="/Books" class="navbar-item">
+            Fantasy Books
           </a>
         </div>
 

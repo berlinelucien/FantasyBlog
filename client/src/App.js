@@ -6,6 +6,7 @@ import Explore from "./pages/Explore";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
+import Books from "./pages/Books";
 
 
 
@@ -19,6 +20,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="explore" element={<Explore />} />
+        </Routes>
+        <Routes>
+          <Route path="books" element={<Books />} />
         </Routes>
         <Routes>
           <Route path="about" element={<About />} />
