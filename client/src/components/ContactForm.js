@@ -2,15 +2,16 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 
-
 // resource from bulma ui website
 const ContactForm = () => {
-
-
   return (
-    <Container maxWidth="sm">
-      <Paper elevation={0}>
-         {/** User input name here */}
+    <Container maxWidth="sm" class="has-background-link-light">
+      <h1 class="is-size-2"> Newsletter </h1>
+      <div className="content">
+        <p class="is-size-2">Sign up for our weekly newsletter</p>
+      </div>
+      <Paper elevation={0} class="has-background-link-light">
+        {/** User input name here */}
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
@@ -18,7 +19,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-{/** User input email here */}
+        {/** User input email here */}
         <div class="field">
           <label class="label">Email</label>
           <div class="control has-icons-left has-icons-right">
@@ -37,7 +38,7 @@ const ContactForm = () => {
           </div>
           <p class="help is-danger">This email is invalid</p>
         </div>
-{/** User can search subject like artwork or books monthly updates here */}
+        {/** User can search subject like artwork or books monthly updates here */}
         <div class="field">
           <label class="label">Subject</label>
           <div class="control">
@@ -50,7 +51,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-{/** User can send a message */}
+        {/** User can send a message */}
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
@@ -58,7 +59,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-{/** User can agree to terms */}
+        {/** User can agree to terms */}
         <div class="field">
           <div class="control">
             <label class="checkbox">
@@ -86,7 +87,10 @@ const ContactForm = () => {
             <button class="button is-link">Submit</button>
           </div>
           <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+            {/** refractor this code to use useNavigate to go back previous */}
+            <a href="/">
+              <button class="button is-link is-light">Cancel</button>
+            </a>
           </div>
         </div>
       </Paper>

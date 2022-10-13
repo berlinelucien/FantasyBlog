@@ -1,5 +1,7 @@
 import React from "react";
 import explore from "../images/explore.png";
+import Popup from "reactjs-popup";
+import ContactForm from "./ContactForm";
 
 const Navbar = () => {
   return (
@@ -28,8 +30,8 @@ const Navbar = () => {
           {/** Explore pages have fan art and cosplay  */}
           <a href="/Explore" class="navbar-item">
             Explore
-                  </a>
-                   {/** Fanatasy Books pages route link here */}
+          </a>
+          {/** Fanatasy Books pages route link here */}
           <a href="/Books" class="navbar-item">
             Fantasy Books
           </a>
@@ -38,9 +40,15 @@ const Navbar = () => {
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a href="/ContactForm" class="button is-primary">
-                <strong>Subscribe</strong>
-              </a>
+              {/** POPUP MODAL SUBSCRIBE NEWSLETTER  */}
+              <Popup
+                trigger={<button class="button is-primary">Subscribe</button>}
+                modal
+              >
+                <div>
+                  <ContactForm />
+                </div>
+              </Popup>
             </div>
           </div>
         </div>
