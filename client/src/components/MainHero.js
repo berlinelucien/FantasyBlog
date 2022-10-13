@@ -12,6 +12,7 @@ const MainHero = (props) => {
       sx={{
         position: "relative",
         backgroundColor: "grey.800",
+        margin:"10px",
         color: "#fff",
         mb: 5,
         backgroundSize: "cover",
@@ -53,7 +54,6 @@ const MainHero = (props) => {
               {props.description} 
             </Typography>
             <Link variant="subtitle1" href="#">
-              link here if you want
             {props.linktext} 
             </Link>
           </Box>

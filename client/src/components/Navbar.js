@@ -2,8 +2,22 @@ import React from "react";
 import explore from "../images/explore.png";
 import Popup from "reactjs-popup";
 import ContactForm from "./ContactForm";
+import ThankMessage from "./ThankMessage";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const submitData = (data) => {
+    setIsSubmit(true);
+    setData((initialData) => data);
+  };
+
   return (
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -46,7 +60,11 @@ const Navbar = () => {
                 modal
               >
                 <div>
-                  <ContactForm />
+                  {isSubmit ? (
+                    <ThankMessage data={data}/>
+                  ) : (<ContactForm onSubmit={submitData} />
+                  )}
+                 
                 </div>
               </Popup>
             </div>
