@@ -12,6 +12,18 @@ const Books = () => {
   // initial state for authors
   const [authors, setAuthors] = useState([]);
   console.log("authors", authors);
+  const [q, setQ] = useState("");
+  const [searchParam] = useState(["title", "author"]);
+
+  const searchItem = (authors) => {
+    return authors.filter((data) => {
+      return searchParam.some((newAuthor) => {
+        return (
+          data[newAuthor].toString().toLowerCase().indexOf(q.toLowerCase()) > -1
+        );
+      });
+    });
+  };
 
   // get full list of artwork and title
   const getAuthors = async () => {
@@ -26,9 +38,18 @@ const Books = () => {
   return (
     <div className="explore">
       <ScrollToTop smooth color="#6f00ff" />
-      <Box sx={{ width: 1600, height: 450 }}>
+      <div className="search-content">
+        <input
+          class="input is-success is-rounded"
+          type="text"
+          placeholder="Search"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+        />
+      </div>
+      <Box sx={{ width: 1600, height: 450, margin: "20px" }}>
         <ImageList variant="masonry" cols={6} gap={15}>
-          {authors.map((data, index) => (
+          {searchItem(authors).map((data, index) => (
             <ImageListItem key={index}>
               <img
                 src={`${data.cover}?w=248&fit=crop&auto=format`}

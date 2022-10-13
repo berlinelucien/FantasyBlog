@@ -8,7 +8,9 @@ const Home = () => {
       {/** Main Feautred Post */}
       <MainHero
         title="Fantasy of Color"
-        description="This blog is a collection of art, photos and stories of people of color in fantasy, urban fantasy, and steampunk settings. Also included are a list of books from black authors. "
+        description="A collection of art, photos and stories of people of color in fantasy, urban fantasy, and steampunk settings. Also included are a list of books from black authors. 
+        
+        pretium vulputate sapien nec sagittis aliquam. Mauris a diam maecenas sed enim ut sem viverra."
         linktext="" />
        {/** Column start here */}
       <div class="columns">
