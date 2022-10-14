@@ -16,12 +16,14 @@ const FeaturedPost = (props) => {
           <Typography component="h2" variant="h5">
               {props.title}
           </Typography>
-         
+          <Typography variant="subtitle1" color="text.secondary">
+              {props.date}
+            </Typography>
           <Typography variant="subtitle1" paragraph>
                         {props.description}
           </Typography>
           <Typography variant="subtitle1" color="primary">
-              Continue reading...
+          Continue reading
             <div>{props.linktext}</div>
               
           </Typography>

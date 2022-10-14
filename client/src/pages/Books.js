@@ -4,14 +4,14 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ScrollToTop from "react-scroll-to-top";
-//import Paper from "@mui/material/Paper";
-//import styled from "@emotion/styled";
+
 //import MasonayGrid from "../components/MasonaryGrid";
 
 const Books = () => {
   // initial state for authors
   const [authors, setAuthors] = useState([]);
   console.log("authors", authors);
+
   const [q, setQ] = useState("");
   const [searchParam] = useState(["title", "author"]);
 
@@ -39,13 +39,16 @@ const Books = () => {
     <div className="explore">
       <ScrollToTop smooth color="#6f00ff" />
       <div className="search-content">
+      
         <input
           class="input is-success is-rounded"
           type="text"
           placeholder="Search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-        />
+          />
+     
+      
       </div>
       <Box sx={{ width: 1600, height: 450, margin: "20px" }}>
         <ImageList variant="masonry" cols={6} gap={15}>

@@ -37,10 +37,7 @@ const Navbar = () => {
           <a href="/" class="navbar-item">
             Home
           </a>
-          {/** About pages route link here */}
-          <a href="/About" class="navbar-item">
-            About
-          </a>
+        
           {/** Explore pages have fan art and cosplay  */}
           <a href="/Explore" class="navbar-item">
             Explore
