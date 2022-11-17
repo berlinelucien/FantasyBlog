@@ -3,9 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //import Students from "./components/students";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
-import About from "./pages/About";
+//import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import ContactForm from "./components/ContactForm";
+import Books from "./pages/Books";
 
 
 
@@ -21,8 +22,9 @@ function App() {
           <Route path="explore" element={<Explore />} />
         </Routes>
         <Routes>
-          <Route path="about" element={<About />} />
+          <Route path="books" element={<Books />} />
         </Routes>
+       
         <Routes>
           <Route path="contactForm" element={<ContactForm />} />
         </Routes>
